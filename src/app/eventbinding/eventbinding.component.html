@@ -1,0 +1,46 @@
+<p>
+  eventbinding works!
+</p>
+<div>
+    <!-- //template reference variables. -->
+  <input type="text" #nameInput>
+  <button type="button" (click)="onButtonClick(nameInput.value)">Greet</button>
+  {{greeting}}
+
+  <!-- two way binding example -->
+  <br>
+  <br>
+
+  <input [(ngModel)]="name" type="text">
+  {{name}}
+
+  <!-- structural directive examples -->
+  
+  
+  <!-- <h2 *ngIf="isEnabled; else elseBlock">this is structural directive example</h2> -->
+<div *ngIf="isEnabled then thenBlock; else elseBlock"></div>
+
+  <ng-template #thenBlock> 
+<h2>this is structural directive example</h2>
+</ng-template>
+
+  <ng-template #elseBlock>
+    <h2>
+      this is structural else block to be displayed if isEnabled is false
+    </h2>
+  </ng-template>
+
+  <!-- sample code to demonstrate ngFor directive -->
+  <div *ngFor = "let color of colors; index as i"> 
+    <h2>{{i+1}} demonstration of ngFor {{color}}</h2>
+  </div>
+
+  <div>
+    <h2>Sample code to show input information from parent component</h2>
+    <h3>{{inputname}}</h3>
+  </div>
+
+  <div>
+    <h2>Sample to send information from child component to parent component</h2>
+    <button (click)="fireEvent()">Send event to parent component</button>
+  </div>

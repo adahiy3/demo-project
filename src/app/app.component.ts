@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'demo-project';
+  title = 'app component';
+   name = "passinginput information from parent to child compoent"
+   public message;
 }

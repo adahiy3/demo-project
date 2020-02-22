@@ -1,0 +1,13 @@
+<p>
+  propertybinding works!
+  {{name}}
+</p>
+<div>
+  <input [disabled]="isDisabled" [id]="myId" type="text" [value]="textValue">
+</div>
+<h2 [class]="applySuccessClass" >this is class binding test for success</h2>
+<h2 [class]="applyDangerClass">apply danger class</h2>
+<h2 [class]="applySpecialClass">apply special class</h2>
+
+<h2 [ngClass]="applySuccessClasses">this is implemetation of success with special text</h2>
+
